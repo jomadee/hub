@@ -1,0 +1,349 @@
+#home .supre{
+	float: left;
+	width: 100%;
+	height: 150px;
+	position: relative;
+	margin-bottom: 15px;
+	z-index: 300;
+	background-position: 0 center;
+	}
+	
+	#home .supre .fotoP{
+		position: absolute;
+		bottom: 5px;
+		left: 5px;
+		width: 500px;
+		}
+		
+		#home .supre .fotoP h1{
+			margin: 0;
+			position: absolute;
+			bottom: 9px;
+			left: 81px;
+			font-size: 26px;
+			color: #222;
+			width: 100%;
+			}
+			
+			#home .supre .fotoP h1 span{
+				color: #fff;
+				position: absolute;
+				bottom: 1px;
+				left: -1px;
+				}
+		
+		#home .supre .fotoP .afoto{
+			background: url('../imgs/bg_foto.png') no-repeat;
+			float: left;
+			width: 70px;
+			height: 70px;
+			position: relative;
+			}
+			
+			#home .supre .fotoP .afoto img{
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				}
+				
+				
+	#home .informij{
+		margin-bottom: 27px;
+		float: left;
+		}
+		
+		#home .informij .bloko .titolo{
+			font-weight: bold;
+			font-size: 12px;
+			display: block;
+			margin-bottom: 5px;
+			}
+		
+		#home .informij .bloko .introducao{
+			display: block;
+			margin-bottom: 4px;
+			font-size: 11px;
+			}
+		
+		#home .informij .bloko .data{
+			color: #888;
+			display: block;
+			}
+					
+
+	#home .hBar{
+		float: left;
+		width: 100%;
+		height: 39px;
+		background: #5b5b5b;
+		margin-bottom: 5px;
+		position: relative;
+		}
+		
+		#home .informij .hBar{
+			margin-bottom: 17px;
+			position: relative;
+			}
+		
+		#home .hBar span.titu{
+			color: #fff;
+			font-size: 14px;
+			position: absolute;
+			left: 20px;
+			top: 10px;
+			text-decoration: none;
+			}
+			
+			#home .hBar span.titu img{
+				margin: 0 5px -4px 0;
+				}
+				
+		#home .hBar .tot{
+			background-color: #fff;
+			float: left;
+			color: #999;
+			border-radius: 11px;
+			-moz-border-radius: 11px;
+			-webkit-border-radius: 11px;
+			
+			text-align: center;
+			top: 12px;
+			right: 12px;
+			position:absolute;
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			font-weight: bold;
+			}
+				
+	#home .vazoBloko{		
+		width: 100%;
+		clear: both;
+		
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between; 
+		 }
+		
+		#home .bloko{
+			float: left;
+			width: 300px;
+			position: relative;			
+			}
+			
+			
+		#home .bloko .respon{
+			background: #ccc;
+			display: block;
+			clear: both;
+			padding: 8px;
+			font-size: 1.2em;
+			}
+			
+	/******************/	
+	#home .bloko.notificacoes {
+		position: relative;
+		}
+		
+		#home .bloko.notificacoes h2 .min_pepo{
+			color: #ff8f33;
+			}
+		
+		#home .bloko.notificacoes .pepoj .pepo{	
+			font-size: 1.2em;
+			position: relative;
+			float: left;
+			padding: 7px  5px 7px;
+			line-height: 120%;
+			clear: both;
+			}
+			
+			#home .bloko.notificacoes .pepoj .pepo .foto{
+				position: absolute;
+				left: 8px;
+				top: 9px;
+				}
+			
+			#home .bloko.notificacoes .pepoj .pepo .lateral{
+				margin-left: 45px;
+				}
+			
+			#home .bloko.notificacoes .pepoj .pepo.ne_vido{
+				
+				}
+				
+				#home .bloko.notificacoes .pepoj .pepo.ne_vido .data{
+					text-decoration: underline;
+					}
+					
+			#home .bloko.notificacoes .pepoj .pepo .data{
+				display: block;
+				font-size: 0.9em;
+				margin-top: 5px;
+			}
+	
+	#home .bloko .projeto .tot{
+		color: #D24726;
+		}
+	
+	#home .bloko .comunidade .tot{
+		color: #405484;
+		}
+	
+	#home .bloko .hub .tot{
+		color: #007F7B;
+		}
+	
+	#home .bloko .social .tot{
+		color: #5CB2FF;
+		}
+	
+	/*****/
+	#home.pagina .mensagens{
+		position: relative; 
+		}
+
+		#home.pagina .mensagens .mensagem{
+			width: 100%;
+			float: left;
+			margin: 8px 0;
+			position: relative;
+			}
+				#home.pagina .mensagens .mensagem .imagens{
+					float: left;
+					margin-right: 10px;
+					width: 34px;
+					height: 34px;
+					position: relative;
+					}
+
+					#home.pagina .mensagens .mensagem .imagens .img_P1,
+					#home.pagina .mensagens .mensagem .imagens .img_P2,
+					#home.pagina .mensagens .mensagem .imagens .img_P3,
+					#home.pagina .mensagens .mensagem .imagens .img_P4{
+						overflow: hidden;
+						position: absolute;
+						}
+
+					#home.pagina .mensagens .mensagem .imagens .img_P1{
+						}
+
+					#home.pagina .mensagens .mensagem .imagens .img_P2{
+						top: 0;
+						left: 0;
+						width: 20px;
+						height: 34px;
+						}
+
+						#home.pagina .mensagens .mensagem .imagens .img_P2 img{
+							margin-left: -33%;
+							}
+
+					#home.pagina .mensagens .mensagem .imagens .img_P3{
+						top: 0;
+						left: 22px;
+						width: 12px;
+						height: 16px;
+						}
+
+					#home.pagina .mensagens .mensagem .imagens .img_P4{
+						top: 18px;
+						left: 22px;
+						width: 12px;
+						height: 16px;
+						}
+
+						#home.pagina .mensagens .mensagem .imagens .img_P3 img,
+						#home.pagina .mensagens .mensagem .imagens .img_P4 img{
+							width: 17px;
+							height: 17px;
+							margin-left: -33%;
+							}
+
+					#home.pagina .mensagens .mensagem .imagens .img_P5{
+						margin: 1px;
+						float: left;
+						width: 15px;
+						height: 15px;
+						}
+
+						#home.pagina .mensagens .mensagem .imagens .img_P5 img{
+							width: 15px;
+							height: 15px;
+							}
+
+				#home.pagina .mensagens .mensagem .colunaTexto{
+					float: left;
+					width: 190px;
+					}
+
+					#home.pagina .mensagens .mensagem .colunaTexto .nome{
+						font-weight: bold;
+						font-size: 1.2em;
+						margin-bottom: 6px;
+						display: block;
+						}
+						
+					#home.pagina .mensagens .mensagem .colunaTexto .nome.naoV{
+						text-decoration: underline;
+						}
+
+					#home.pagina .mensagens .mensagem .colunaTexto .texto{
+						overflow: hidden;
+						height: 18px;
+						display: block;
+						font-size: 1.1em;
+						position: relative;
+						line-height: 1.4em;
+						}
+						
+	#home .mentoring{
+		position: absolute;
+		bottom: 11px;
+		right: 47px;
+		}
+						
+	#home .add{
+		position: absolute;
+		bottom: 11px;
+		right: 15px;
+		}
+		
+		#home .pIco .ico{
+			position: relative;
+			width: 24px;
+			height: 21px;
+			cursor: pointer;
+			float: left;
+			}
+			
+			#home .pIco .ico img{
+				float: left;
+				}
+			
+			#home .pIco .ico span{
+				position: absolute;
+				top: 1px;
+				right:1px;
+				width: 12px;
+				float: left;
+				text-align: center;
+				}
+		
+		#home .add .lista{
+			background: #fff;
+				
+			position: absolute;
+			top: 20px;
+			right: 0;
+			display: none;
+			padding: 10px;
+			
+			box-sizing:content-box;
+			-moz-box-sizing:content-box;
+			-webkit-box-sizing:content-box;
+			
+			-moz-box-shadow: 0 0 3px 3px rgba(0,0,0,0.3);
+			-webkit-box-shadow: 0 0 3px 3px	rgba(0,0,0,0.3);
+			box-shadow: 0 0 3px 3px rgba(0,0,0,0.3);
+			}

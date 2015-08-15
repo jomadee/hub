@@ -1,0 +1,226 @@
+/**************************/
+
+.shcolor{
+	color: #405484 !important;
+	}
+	
+.shbackground{ 
+	background-color: #405484 !important;
+	}
+	
+.shborder{ 
+	border-color: #405484 !important;
+	}
+	
+#paginacao .pag_uni .link{
+	color: #405484;
+	}
+
+#paginacao .pag_ativo{ 
+	background-color: #405484;
+	}
+
+/* Em comunidade */
+.menuLateral .top{
+	padding: 0 0 16px; 
+	}
+	
+	.menuLateral .top img{
+		margin-bottom: 5px; 
+		}
+	
+	.menuLateral .top .nome{
+		margin-bottom: 5px;
+		display: block;
+		font-size: 1.1em;
+		color: #555;
+		}
+
+	.menuLateral .top .img{
+		position: relative;
+		}
+
+		.menuLateral .top .img .link{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			z-index: 20;
+			background: rgba(256, 256, 256, 0.6);				
+			text-align: center;
+			}
+			
+		.menuLateral .top .img .link:hover{
+			background: rgba(256, 256, 256, 0.7);
+			}
+
+			.menuLateral .top .img:hover .link{
+				display: block;
+				}
+				
+			.menuLateral .top .img .link button{
+				color: #402C47;
+				display: block;
+				font-size: 1.1em;
+				line-height: 30px;
+				font-weight: bold;
+				text-align: center;
+				width: 161px;
+				}
+
+#comunidades{
+	
+	}
+	
+	#comunidades .suas_comu{
+		clear: both;
+		margin-bottom: 40px;
+		float: left;
+		}
+		
+		#comunidades .suas_comu .blokos .bloko{
+			background: transparent;
+			height: 122px;
+			}
+			
+		#comunidades .suas_comu .blokos .bloko:hover{
+			background: #f9f9f9;
+			}
+		
+				
+			#comunidades .suas_comu .blokos .bloko h2{
+				width: 204px;
+				height: 30px;
+				top: 15px;
+				bottom: auto;
+				left: 15px;
+				font-size: 1.3em !important;
+				overflow: hidden;
+				white-space:nowrap; 
+				text-overflow:ellipsis;
+				color: #555 !important;
+				font-weight: bold;
+				}
+		
+			#comunidades .suas_comu .blokos .bloko .imagem{
+				position: absolute;
+				left: 15px;
+				top: 35px;
+				}
+				
+			#comunidades .suas_comu .blokos .bloko .membros{
+				display: block;
+				position: absolute;
+				bottom: 15px;
+				left: 125px;
+				color: #555;
+				font-size: 1em;
+				}
+				
+	#comunidades .outras_comu{
+		clear: both;
+		}
+		
+		#comunidades .outras_comu .blokos .bloko{
+			width: 143px;
+			}
+		
+			#comunidades .outras_comu .blokos .bloko .imagem{
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 1;
+				}
+				
+			#comunidades .outras_comu .blokos .bloko .bg{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+				background: url('../imagens/comunidades/comuni_bg.png') repeat-x;
+				}
+				
+			#comunidades .outras_comu .blokos .bloko h2{
+				top: 8px;
+				bottom: auto;
+				left: 8px;
+				z-index: 10;
+				font-size: 1.3em;
+				font-weight: bold;
+				width: 127px;				
+				}
+				
+			#comunidades .outras_comu .blokos .bloko h2.hh2{
+				color: #555 !important;
+				z-index: 9;
+				left: 9px;
+				top: 9px;
+				}
+
+			#comunidades .outras_comu .blokos .bloko .membros{
+				position: absolute;
+				z-index: 9;
+				bottom: 9px;
+				left: 0px;
+				padding: 5px;
+				background: #fff;
+				}
+			
+
+/*************		HOME	*/
+#cmd_home{
+	position: relative;
+	}
+	
+	#cmd_home h1.nmemb{
+		width: 548px;
+		}
+	
+	#cmd_home .sobre{
+		margin-bottom: 40px;
+		}
+		
+	#cmd_home .link{
+		position: absolute;
+		top: 5px;
+		right: 0px;
+		}		
+		
+		
+	/***	Forum	*/
+		#cmd_home .topicos table{
+			width: 100%;
+			
+			}
+			
+			#cmd_home .topicos table thead{
+				color: #5F00B5;
+				font-size: 1.1em;
+				}
+			
+				#cmd_home .topicos table thead tr th{
+							
+					}
+					
+			#cmd_home .topicos table tbody{
+				font-size: 1.5em;
+				}
+			
+				#cmd_home .topicos table td{
+					vertical-align: middle;
+					padding: 8px 0;
+					}
+					
+					#cmd_home .topicos table td a{
+						text-decoration: none;
+						color: #555;
+						}
+					
+					
+			/**/
+			th.center, td.center{
+				text-align: center;
+				}
+			/**/

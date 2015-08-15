@@ -1,0 +1,469 @@
+
+/* Form Space {	*/
+.formSpace{
+	margin-top: 10px;
+	float: left;
+	width: 100%;
+	}
+
+.formSpace label{
+	float: left;
+	width: 100%;
+	font-size: 3em;
+	margin: 30px 0;
+	}
+
+.formSpace div{
+	float: left;
+	width: 100%;
+	}
+	
+	.formSpace div textarea{
+		float: left;
+		width: 100%;
+		border: none;
+		background: none;
+		resize: none;
+		height: 315px;
+		font-size: 2.5em;
+		line-height: 1.1em;
+		margin: 0;
+		padding: 0;
+		color: #555;
+		}
+
+	.formSpace div.botoes{
+		border-color: #ccc;
+		border-style: solid;
+		border-top-width: 1px;
+		padding-top: 8px;
+		}
+
+	.formSpace div.botoes .botao{
+		float: right;
+		padding: 0;
+		}
+		
+		.formSpace div.botoes .botao button{
+			padding: 0 20px;
+			}
+				
+/* } */
+
+/**********************			FORM			**********************/
+form.form{
+	float: left;
+	width: 100%;
+	}
+	
+form.form fieldset{
+	clear: both;
+	margin-bottom: 20px;
+	float: left;
+	width: 100%;
+	}
+
+	
+	form.form fieldset legend{
+		font-size: 1.4em;
+		margin-bottom: 10px;
+		font-weight: bold;
+		color: #444;
+		}
+
+	form.form fieldset > div {
+		display: block;
+		clear: both;
+		margin: 0 12px 20px 0;
+		
+		}
+			
+		form.form fieldset > div label{
+			float: none;
+			margin-bottom: 7px;
+			color: #555;
+			font-size: 1.5em;
+			display: block;
+			}
+			
+		form.form fieldset > div label.r{
+			font-weight: bold;
+			}
+			
+		form.form fieldset > div label.error{
+			font-size: 10px;
+			margin-top: 4px;
+			color: #a00;
+			}
+				
+		
+		form.form fieldset > div input, 
+		form.form fieldset > div textarea, 
+		form.form fieldset > div select{
+			display: block;
+			float: none;
+			border: 1px solid #CCC;
+			border-color: #f3f3f3 #f3f3f3 #D9D9D9 #D9D9D9;
+			font-size: 1.2em;
+			width: 100%;
+			padding: 0px 5px;
+			height: 28px;
+			color: #666;			
+			background: #fff;
+			
+			box-sizing:  content-box;
+			-moz-box-sizing: content-box; /* Firefox */
+			-webkit-box-sizing: content-box; /* Safari */
+			}
+			
+		form.form fieldset > div textarea{
+			width: 100%;
+			padding: 5px;
+			height: 120px;
+			resize: none;
+			line-height: 130%;
+			}
+			
+		form.form fieldset > div input:focus,
+		form.form fieldset > div textarea:focus, 
+		form.form fieldset > div select:focus{
+			/*box-shadow: 0px 0px 3px #ccc;*/
+			border-color: #999 #999 #555 #555;
+			}
+		
+		form.form fieldset > div input.error,
+		form.form fieldset > div textarea.error,
+		form.form div fieldset > select.error{
+			border-color: #777;
+			}
+		
+		 form.form fieldset > div select{
+			width: 100%;
+			padding: 0;
+			height: 15px;
+			padding: 7px 0;
+			}	
+		
+			form.form fieldset > div select option{
+				padding: 4px 4px;
+				background: #eee;
+				}
+
+		form.form fieldset > div input.inatv,
+		form.form fieldset > div textarea.inatv,
+		form.form fieldset > div select.inatv{
+			background: #e7e7e7;
+			color: #999;
+			}
+			
+		form.form fieldset > div textarea{
+			line-height: 150%;
+			}
+			
+		form.form fieldset > div > span{
+			float: none;
+			clear: both;
+			display: block;
+			margin: 2px 0 3px;
+			}
+		
+		form.form fieldset > div span.ex{			
+			margin-top: 2px;
+			padding: 5px 8px;
+			background: #e7e7e7;
+			border-bottom: 1px solid #ddd;			
+			width: 100%;
+			color: #aaa;
+			font-size: 10px;
+			border-radius: 0 0 5px 5px;
+			
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			}
+			
+			form.form fieldset > div span label{
+				font-weight: normal;
+				display: inline;
+				float: none;
+				}
+				
+				form.form fieldset > div > span label input{
+					width: 16px;
+					vertical-align: text-bottom;
+					display: inline;
+					float: none;
+					margin: 0;
+					}
+			
+			form.form div.label textarea.editor{
+				height: 500px;
+				}
+		
+		
+		form.form fieldset div > table{
+			border-collapse: separate;
+			border-spacing: 5px 0px;
+			width: 100%;
+			margin: 0px;
+		
+			}
+			
+			form.form fieldset div > table tbody{
+				width: 100%;
+				}
+
+				form.form fieldset div > table tbody tr{
+					width: 100%;
+					}
+					
+					form.form fieldset div > table tbody tr td{
+						vertical-align: top;
+						width: auto;
+						}
+						
+					
+					form.form fieldset div > table tbody tr td input{
+						width: 100%;
+						}
+	
+	form.form .botao{
+		margin-top: -20px;
+		}
+		
+	
+	.mceEditor{
+		display: block;
+		margin: 0 -30px 0 0 !important;
+		}	
+
+/* Blocos */
+.blokos{
+	margin: 0 -4px;
+	float: left;
+	color: #fff;
+	}
+		
+	.blokos .bloko{
+		background: #aaa;
+		width: 204px;
+		height: 130px;
+		float: left;
+		margin: 4px;
+		padding: 15px;
+		
+		box-sizing:  content-box;
+		-moz-box-sizing: content-box; /* Firefox */
+		-webkit-box-sizing: content-box; /* Safari */
+		
+		position: relative;
+		}
+		
+		.blokos .bloko .alingBottom,
+		.blokos .bloko h2{
+			color: #fff !important;;
+			position: absolute;
+			bottom: 15px;
+			margin: 0;
+			left: 15px;
+			}
+
+			.blokos .bloko h2 a{
+				color: #fff;
+				text-decoration: none;
+				}
+		
+		a.lall{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 100;
+			background: url('../imagens/blank.gif');
+			}
+			
+		.bloko a.lall.inMobile{
+			z-index: 85;
+			}
+			
+		.bloko img.icone{
+				position: absolute;
+				left: 15px;
+				bottom: 45px;
+				}
+		
+	.blokos .bloko.dekstre{
+		float: right;
+		}
+		
+	.blokos .bloko.pura{
+		padding: 0;
+		width: 234px;
+		height: 159px;
+		background: none;
+		color: #555;
+		}
+			
+	/* será depreciada { */
+	.blokos .bloko.t12r{
+		height: 296px;
+		float: right;
+		}
+	/* } */
+		
+			
+	.blokos .bloko.t21{
+		width: 446px;
+		}
+				
+		.blokos .bloko.pura.t21{
+			width: 476px;
+			}
+		
+	.blokos .bloko.t31{
+		width: 688px;
+		}		
+			
+		.blokos .bloko.pura.t31{
+			width: 718px;
+			}
+		
+	.blokos .bloko.t32{
+		width: 688px;
+		height: 296px;
+		}
+		
+			
+		.blokos .bloko.pura.t32{
+			width: 718px;
+			height: 326px;
+			}
+
+	.blokos .bloko.t12{
+		height: 296px;
+		}
+		
+		.blokos .bloko.pura.t12{
+			height: 326px;
+			}
+	
+	.blokos .bloko.t22{
+		width: 446px;
+		height: 296px;
+		}
+		
+		.blokos .bloko.pura.t22{
+			width: 476px;
+			height: 326px;
+			}
+		
+	.blokos .bloko.t41{
+		width: 930px;
+		}
+		
+		.blokos .bloko.pura.t41{
+			width: 960px;
+			}
+
+		
+		
+/******** End Blocos */
+
+/* setas */
+
+.seta,
+.ceta{
+	width: 0 !important;
+	height: 0 !important;
+	border-style: solid;
+	border-width: 6px;
+	display: block;
+	}
+
+	.seta.cima,
+	.seta.baixo,
+	.ceta.cima,
+	.ceta.baixo{
+		border-left-color: transparent !important;
+		border-right-color: transparent !important;
+		}
+
+	.seta.esquerda,
+	.seta.direita,
+	.ceta.esquerda,
+	.ceta.direita{
+		border-bottom-color: transparent !important;
+		border-top-color: transparent !important;
+		}
+
+	.seta.cima,
+	.ceta.cima{
+		border-top-width: 0px !important;
+		}
+
+	.seta.baixo,
+	.ceta.baixo{
+		border-bottom-width: 0px !important;
+		}
+
+	.seta.esquerda,
+	.ceta.esquerda{
+		border-left-width: 0px !important;
+		}
+
+	.seta.direita,
+	.ceta.direita{
+		border-right-width: 0px !important;
+		}
+
+/********  End setas */
+
+/*  Botões */
+
+span.botao{
+	float: left;
+	background: #402C47;
+	margin-right: 8px;
+	position: relative;
+	cursor: pointer;
+	}
+	
+span.botao.right{
+	float: right;
+	margin-right: 0px;
+	margin-left: 8px;	
+	}
+	
+	span.botao span{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+		}
+	
+	span.botao a{
+		height: 30px;
+		padding: 0 15px;
+		color: #fff;
+		float: left;
+		line-height: 30px;
+		text-decoration: none;
+		font-size: 1.1em;
+		font-family: verdana, arial, "DejaVu Sans", "Ubuntu","Ubuntu Beta","Bitstream Vera Sans";
+		}
+		
+	span.botao button{
+		height: 30px;
+		padding: 0 15px;
+		color: #fff;
+		float: left;
+		background: none;
+		font-size: 1.1em;
+		font-family: verdana, arial, "DejaVu Sans", "Ubuntu","Ubuntu Beta","Bitstream Vera Sans";
+		}
+		
+/******** End Botões */
