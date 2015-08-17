@@ -168,7 +168,35 @@
 				background: #fff;
 				}
 			
+/****************************/
+.cmd-cmd_top{
+	
+	}
 
+	.cmd-cmd_top .titulo{
+		font-size: 1.8em;
+		display: block;
+		margin-bottom: 10px;
+		}
+		
+	.cmd-cmd_top .descricao{
+
+		}
+			
+		.cmd-cmd_top .descricao p{
+			font-size: 1.2em;
+			}
+	
+	
+.cmd-cmd_forum{
+	}
+	
+	.cmd-cmd_forum h2{
+		font-size: 1.8em;
+		font-weight: 400;
+		color: inherit !important;
+		}
+	
 /*************		HOME	*/
 #cmd_home{
 	position: relative;

@@ -1,7 +1,3 @@
-<?php 
-
-?>
-
 <div class="pagina" id="home">
 	
 	<div class="pepo">
@@ -200,7 +196,7 @@
 
 				$mensagens = mysql_query($sql);
 				?>
-				<div class="mensagens">
+				<div class="hb_mensagens">
 					<?php
 					if(mysql_num_rows($mensagens) == 0)
 						echo '<span class="respon">Converse com seus contatos, troque informações, idéias</span>';
@@ -210,7 +206,7 @@
 						$i++;
 						?>
 
-						<div class="mensagem">
+						<div class="hb_mensagem">
 							<a href="social/mensagens/conversa=<?php echo $mensagem['conversa']?>" class="lall"></a>
 							<?php
 							$resu = null;
@@ -227,7 +223,7 @@
 								<?php
 								switch($quant){
 									case 2:
-										$quem = ($resu[0][0] == $_SESSION['sh']['id']? 1: 0);
+										$quem = ($resu[0][0] == $_ll['user']['id']? 1: 0);
 										?>
 										<div class="img_P1">
 											<img src="<?php echo img('uploads/contas/micro_' . $resu[$quem][2]);?>" />
@@ -282,7 +278,7 @@
 								$a = 0;
 
 								foreach($resu as $nome){
-									$html .= (($nome[1] != $_SESSION['sh']['nome'])?(($a < 2)? ($html == ''? '': ', ') . $nome[1]: ''):'');
+									$html .= (($nome[1] != $_ll['user']['nome'])?(($a < 2)? ($html == ''? '': ', ') . $nome[1]: ''):'');
 									$a++;
 								}								
 								$html .= ($quant <= 3? ' e': ',') . ' eu';

@@ -3,7 +3,7 @@ lliure::inicia('aplimo');
 lliure::inicia('navigi');
 
 lliure::loadcss($_ll['app']['pasta'].'padroes.css');
-lliure::loadcss($_ll['app']['pasta'].'estilo.css');
+//lliure::loadcss($_ll['app']['pasta'].'estilo.css');
 
 $_ll['titulo'] = 'Hub';
 
@@ -44,15 +44,15 @@ class lliurehub extends aplimo{
 		
 		<div class="container corpo">	
 			<div class="menu">
-				
 				<div class="supre" style="background-image: url(<?php echo img('contas/bg_'.$this->user['capa']); ?>);">
 					<div class="fotoP">
 						<div class="afoto">
-							<a href="<?php echo 'perfil/normal_'.$_ll['user']['id'];?>"><img src="<?php echo img('contas/mini_'.$this->user['id']);?>" alt="" /></a>
+							<a href="<?php echo 'perfil/'.$this->user['id'];?>"><img src="<?php echo img('contas/mini_'.$this->user['img']);?>" alt="" /></a>
 						</div>
 					</div>
 					
 					<h1><?php echo '<span>'.stripcslashes($this->user['nome'].' '.$this->user['sobrenome']).'</span>'; ?></h1>
+					<span class="trabalho"><?php echo $this->user['trabalhoOnde'].', '.$this->user['trabalhoCargo']?></span>
 				</div>
 			
 				<ul>
@@ -99,6 +99,7 @@ class lliurehub extends aplimo{
 				<div class="both"></div>
 			</div>
 			
+			<div class="both"></div>
 		</div>
 		
 		
@@ -130,7 +131,7 @@ $aplikajo->prefixo = PREFIXO.'hub_';
 $aplikajo->menu('Home', 'home');
 $aplikajo->menu('Social', 'social');
 $aplikajo->menu('Projetos', 'projeto');
-$aplikajo->menu('Forum', 'comunidade');
+$aplikajo->menu('Fórum', 'comunidade');
 
 
 $aplikajo->header();

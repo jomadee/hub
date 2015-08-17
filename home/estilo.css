@@ -203,13 +203,13 @@
 		position: relative; 
 		}
 
-		#home.pagina .mensagens .mensagem{
+		#home.pagina .hb_mensagens .hb_mensagem{
 			width: 100%;
 			float: left;
 			margin: 8px 0;
 			position: relative;
 			}
-				#home.pagina .mensagens .mensagem .imagens{
+				#home.pagina .hb_mensagens .hb_mensagem .imagens{
 					float: left;
 					margin-right: 10px;
 					width: 34px;
@@ -217,78 +217,78 @@
 					position: relative;
 					}
 
-					#home.pagina .mensagens .mensagem .imagens .img_P1,
-					#home.pagina .mensagens .mensagem .imagens .img_P2,
-					#home.pagina .mensagens .mensagem .imagens .img_P3,
-					#home.pagina .mensagens .mensagem .imagens .img_P4{
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P1,
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P2,
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P3,
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P4{
 						overflow: hidden;
 						position: absolute;
 						}
 
-					#home.pagina .mensagens .mensagem .imagens .img_P1{
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P1{
 						}
 
-					#home.pagina .mensagens .mensagem .imagens .img_P2{
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P2{
 						top: 0;
 						left: 0;
 						width: 20px;
 						height: 34px;
 						}
 
-						#home.pagina .mensagens .mensagem .imagens .img_P2 img{
+						#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P2 img{
 							margin-left: -33%;
 							}
 
-					#home.pagina .mensagens .mensagem .imagens .img_P3{
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P3{
 						top: 0;
 						left: 22px;
 						width: 12px;
 						height: 16px;
 						}
 
-					#home.pagina .mensagens .mensagem .imagens .img_P4{
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P4{
 						top: 18px;
 						left: 22px;
 						width: 12px;
 						height: 16px;
 						}
 
-						#home.pagina .mensagens .mensagem .imagens .img_P3 img,
-						#home.pagina .mensagens .mensagem .imagens .img_P4 img{
+						#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P3 img,
+						#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P4 img{
 							width: 17px;
 							height: 17px;
 							margin-left: -33%;
 							}
 
-					#home.pagina .mensagens .mensagem .imagens .img_P5{
+					#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P5{
 						margin: 1px;
 						float: left;
 						width: 15px;
 						height: 15px;
 						}
 
-						#home.pagina .mensagens .mensagem .imagens .img_P5 img{
+						#home.pagina .hb_mensagens .hb_mensagem .imagens .img_P5 img{
 							width: 15px;
 							height: 15px;
 							}
 
-				#home.pagina .mensagens .mensagem .colunaTexto{
+				#home.pagina .hb_mensagens .hb_mensagem .colunaTexto{
 					float: left;
 					width: 190px;
 					}
 
-					#home.pagina .mensagens .mensagem .colunaTexto .nome{
+					#home.pagina .hb_mensagens .hb_mensagem .colunaTexto .nome{
 						font-weight: bold;
 						font-size: 1.2em;
 						margin-bottom: 6px;
 						display: block;
 						}
 						
-					#home.pagina .mensagens .mensagem .colunaTexto .nome.naoV{
+					#home.pagina .hb_mensagens .hb_mensagem .colunaTexto .nome.naoV{
 						text-decoration: underline;
 						}
 
-					#home.pagina .mensagens .mensagem .colunaTexto .texto{
+					#home.pagina .hb_mensagens .hb_mensagem .colunaTexto .texto{
 						overflow: hidden;
 						height: 18px;
 						display: block;

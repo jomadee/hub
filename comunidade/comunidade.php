@@ -52,6 +52,7 @@ switch(isset($_GET['p']) ? $_GET['p'] : 'home'){
 		?>
 			
 		<div class="suas_comu">
+			<h2><?php _t('cmd-minhas') ?></h2>
 			<div class="blokos">				
 				<?php
 				$ids = null;

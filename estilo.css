@@ -2,13 +2,31 @@
     display: none;
 	}
 	
-#conteudo{
-	height: 100%;
-	}
 
 #tudo{
 	background: #e9eaed;
+	min-height: 100%;
+   	display: flex;
+   	justify-content: center;
+    width: 100%;
 	}
+	
+#conteudo{
+	width: 100%; 
+	height: auto !important;
+	position:relative;
+	margin: 0;
+	padding: 0;
+	}
+
+/************************************************************************/
+.container{
+	margin: 0;
+	}
+	
+	.corpo{
+		height: auto;
+		}
 
 .container.cabecalho {
 	height: 30px;
@@ -21,6 +39,7 @@
 	box-shadow: 0px -1px 3px 1px rgba(0,0,0,0.53);
 	z-index: 10000;
 	position: relative;
+	width: 100%;
 	}
 	
 	.container.cabecalho h1{
@@ -38,16 +57,18 @@
 
 .container.corpo{
 	z-index: 1000;
-	height: calc(100%);
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	position: relative;
+	
+	height: calc(100% - 30px);
 	}
 			
 	.corpo .menu{
 		width: 960px;
 		position: relative;
+		margin-bottom: 10px;
 		}
 		
 		.corpo .menu .supre{
@@ -73,10 +94,20 @@
 					color: #fff !important;
 					text-shadow: 1px 1px 1px #222;
 					position: absolute;
-					top: 52px;
+					top: 47px;
 					left: 83px;
 					}
-		
+				
+				.corpo .menu .supre .trabalho{
+					margin: 0;
+					color: #fff;
+					text-shadow: 1px 1px 1px #222;
+					position: absolute;
+					top: 68px;
+					left: 83px;
+					font-size: 1.1em;
+					}
+				
 		.corpo .menu ul{
 			position: absolute;
 			bottom: 0;
@@ -116,6 +147,7 @@
 		
 		.corpo .centro{
 			width: 960px;
+			height: 100%;
 			}
 
 
@@ -123,15 +155,38 @@
 
 
 /****************************************************/
-
-.hb_menu{
-	float: left;
-	width: 145px;
-	background: #eee;
-	heigh: 100%;
-	}
-
 .pagina{
 	width: 960px;
 	float: left;			
 	}
+
+
+.hb_internPage{
+	display: flex;
+	height: 100%;
+	
+	justify-content: space-between;	
+	}
+
+	.hb_menu{
+		float: left;
+		width: 200px;
+		}
+	
+	.hb_centro{
+		width: 570px;
+		}
+	
+	.hb_lateral{
+		width: 180px;
+		}
+		
+		
+		
+		.hb_box{
+			background: #fff;
+			border: 1px solid #ddd;
+			padding: 15px;
+			color: #666;
+			margin-bottom: 10px;
+			}
