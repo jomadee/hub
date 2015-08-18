@@ -419,7 +419,7 @@ form.form fieldset{
 
 /********  End setas */
 
-/*  Botões */
+/*  Bot�es *
 
 span.botao{
 	float: left;
@@ -466,4 +466,13 @@ span.botao.right{
 		font-family: verdana, arial, "DejaVu Sans", "Ubuntu","Ubuntu Beta","Bitstream Vera Sans";
 		}
 		
-/******** End Botões */
+/**********************************************************************************************************/
+h1{
+	font-size: 1.8em;
+	color: inherit !important;
+	}
+	
+h2{
+	font-size: 1.8em;
+	color: inherit !important;
+	}

@@ -1,32 +1,6 @@
-<?php
-$sql = '
-	SELECT
-		a.status
-	FROM
-		' . PREFIXO . 'usuario_comunidade a
-	
-	WHERE
-		a.usuario = "' . $_ll['user']['id'] . '" and a.comunidade = "' . $this->cmdd['id'] . '"
-';
-
-$sql = mysql_fetch_assoc(mysql_query($sql));
-
-
-?>
 <div id="cmd_home"  class="hb_internPage">
-	<div class="hb_menu">
-		<img src="<?php echo img('uploads/comunidades/g_'.$this->cmdd['img']); ?>" class="imagem"/>
-		<h1 class="shcolor<?php echo ((!($sql['status'] == 'U' or $sql['status'] == 'A'))? ' nmemb' :'')?>"><?php echo $this->cmdd['nome']; ?></h1>
-		<ul>
-			<?php 
-			echo ((!($sql['status'] == 'U' or $sql['status'] == 'A'))
-					? '<li><a href="' . $this->onserver . $this->cmdd['id'] . '/home/ac=part">Participar</a></li>'
-					: '')
-			?>
-			
-			<li><a href="">Criar tópico</a></li>
-			<li><a href="">Ver tópicos</a></li>
-		</ul>
+	<div class="hb_menu cmd-cmd_menu">
+		<?php require_once $_ll['app']['pasta'].'comunidade/menu.php';?>
 	</div>
 	
 	<div class="hb_centro">
@@ -36,93 +10,71 @@ $sql = mysql_fetch_assoc(mysql_query($sql));
 				.'<div class="descricao">'.$this->cmdd['descricao'].'</div>'; 
 			?>
 		</div>
-		
-		
-		
+				
 		<div class="hb_box cmd-cmd_forum">
 			<h2><?php _t('cmd-forum'); ?></h2>
-			<table>
-				<thead>
-					<tr>
-						<th style="width: 591px;"></th>
-						<th style="width: 127px;"></th>
-						<th style="width: 50px;"></th>
-					</tr>
-				</thead>
-				
-				<?php			
-				$query = 'select a.*, (select count(id) from '.PREFIXO.'comunidade_mensagens where topico = a.id)-1 as total
-							from '.PREFIXO.'comunidade_topicos a
-							where a.comunidade = "'.$this->cmdd['id'].'" 
-							';
-							
-				if(isset($_GET['pes'])){
 			
-					$_GET['pes'] = urldecode($_GET['pes']);
+			<div class="cmd-forum_table">
+				<?php		
+
+				$query = 'select a.*, count(b.topico) - 1 as total,
+							b.mensagem, b.data
+							from '.PREFIXO.'comunidade_topicos a
 				
-					$pesq = explode(' ', $_GET['pes']);
+							left join (select mg.* from '.PREFIXO.'comunidade_mensagens mg order by mg.id desc) b
+							on a.id = b.topico
 					
-					$query .= ' and (';			
-							
-					foreach($pesq as $chave => $valor){
-						$query .= ($chave != 0?' and':'').' (';
-						
-						$query .= 'a.nome like "%'.$valor.'%"';
-						
-						$query .= ')';
-					}
-					$query .= ') ';	
-				}
+							where a.comunidade = "'.$this->cmdd['id'].'"
+							group by b.topico
+							order by a.id desc limit 7
+							';
 				
-				$total_reg = 5; // número de registros por página
-	
-				if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
-					$pc = $_GET['pagina'];
-				} else {
-					$pc = 1;
-				}
-				
-				$inicio = $pc - 1;
-				$inicio = $inicio * $total_reg;
-				
-				$todos = mysql_query($query);
-				$tr = mysql_num_rows($todos); // verifica o número total de registros
-				
-				$tp = ceil($tr / $total_reg); // verifica o número total de páginas
-				
-				$query = mysql_query($query.'order by a.id desc limit '.$inicio.",".$total_reg);
+				$query = mysql_query($query);
 				
 				while($dados = mysql_fetch_assoc($query)){
-					$url = jf_monta_link($_GET, 'pagina', JF_URL_AMIGAVEL) . '/forum/' . $dados['id'];
-					?>
-					<tr>
-						<td>
-							<?php
-							if ($this->cmdd['membro'] == true){?>
-								<a href="<?php echo $url ?>"><?php echo $dados['nome']; ?></a>
-								<?php
-							}else{
-								echo $dados['nome'];
-							}?>
-						</td>
-						<td class="center"><?php echo $dados['total']; ?></td>
-						<?php
-						if ($this->cmdd['membro'] == true){
-							?>
-							<td class="center"><a href="<?php echo $url , '/pag=ultima';?>" title="<?php _t('ac-ult-pag'); ?>" class="img16 lasta"></a></td>
-							<?php
-						}?>
-						
-					</tr>
-					<?php
+					$url = $this->home.'&sapm=forum&cmd='.$this->cmdd['id'].'&topico=' . $dados['id'];
+					$mensagem = substr(strip_tags($dados['mensagem']), 0, 100);
+					
+					echo '<div class="post">'
+							.'<span class="titulo ll_color">'.($this->cmdd['membro'] == true
+								 ? '<a href="'.$url.'" class="ll_color">'.$dados['nome'].'</a>'
+								 : $dados['nome']
+							 ).'</span>'
+							
+							.'<span class="sub">'
+								.'<span class="resposta">' .$dados['total'].' respostas'. '</span> <span class="resposta">-</span>' 
+								.'<span class="texto">' . ($this->cmdd['membro'] ? '<a href="'.$url . '/pag=ultima" title="'. _t('ac-ult-pag', 0).'">'.$mensagem.'</a>' : $mensagem ) .'</span>'
+								.'<span class="resposta">' .rd_date($dados['data']). '</span>'
+							.'</span>'		
+									
+						.'</div>';
 				}
 				?>
-			</table>
+				<div class="both"></div>
+			</div>
 	
 		</div>
 	</div>
 	
-	<div class="hb_lateral">
-		teste
+	<div class="hb_lateral cmd-cmd_lateral">
+		<div class="hb_box">
+			<span class="titulo">Membros</span>
+			<div class="fotos">
+				<?php 
+				$query = mysql_query('select uct.id, uct.img
+							from '.PREFIXO.'usuario_comunidade ucd
+	 
+							left join '.PREFIXO.'usuario_conta uct
+							on ucd.usuario = uct.id
+	
+							where ucd.comunidade = "'.$this->cmdd['id'].'" 
+						order by RAND() 
+						limit 9');
+	
+				while($user = mysql_fetch_assoc($query))
+					echo '<img src="'. img('uploads/contas/mini_'.$user['img'], '50-50-o'). '" class="imagem"/>'
+				?>
+			</div>
+		</div>
 	</div>
 </div>

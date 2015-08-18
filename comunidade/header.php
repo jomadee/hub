@@ -7,7 +7,9 @@ else
 	$modo = 'index';
 
 $subPagina = 'comunidades/' . $modo;
-	
+
+
+
 if(isset($_GET['cmd'])) {
 	$subPagina = 'home/' . $modo;
 	
@@ -27,11 +29,9 @@ if(isset($_GET['cmd'])) {
 	
 	}
 	
-	if(isset($_GET[2])){
-		$subPagina = $_GET[2] . '/' . $modo;
-	}
-	
 	$this->cmdd = $cmdd;
+	
+	$_ll['titulo'] .= ' | '.$this->cmdd['nome'];
 }
 
 

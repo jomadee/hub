@@ -164,18 +164,27 @@
 .hb_internPage{
 	display: flex;
 	height: 100%;
-	
+	color: #666;
 	justify-content: space-between;	
 	}
 
 	.hb_menu{
 		float: left;
-		width: 200px;
+		width: 190px;
 		}
 	
 	.hb_centro{
 		width: 570px;
 		}
+		
+		.hb_centro.parcial{
+			width: 759px;
+			background: #fff;
+			margin-top: -10px;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-width: 0 1px;
+			}
 	
 	.hb_lateral{
 		width: 180px;
@@ -187,6 +196,6 @@
 			background: #fff;
 			border: 1px solid #ddd;
 			padding: 15px;
-			color: #666;
+			
 			margin-bottom: 10px;
 			}
