@@ -58,7 +58,6 @@ form.form{
 	
 form.form fieldset{
 	clear: both;
-	margin-bottom: 20px;
 	float: left;
 	width: 100%;
 	}
@@ -74,8 +73,7 @@ form.form fieldset{
 	form.form fieldset > div {
 		display: block;
 		clear: both;
-		margin: 0 12px 20px 0;
-		
+		margin: 0 12px 20px 0;		
 		}
 			
 		form.form fieldset > div label{
@@ -110,10 +108,7 @@ form.form fieldset{
 			height: 28px;
 			color: #666;			
 			background: #fff;
-			
-			box-sizing:  content-box;
-			-moz-box-sizing: content-box; /* Firefox */
-			-webkit-box-sizing: content-box; /* Safari */
+			border-radius: 0;
 			}
 			
 		form.form fieldset > div textarea{
@@ -127,7 +122,7 @@ form.form fieldset{
 		form.form fieldset > div input:focus,
 		form.form fieldset > div textarea:focus, 
 		form.form fieldset > div select:focus{
-			/*box-shadow: 0px 0px 3px #ccc;*/
+			box-shadow: none;
 			border-color: #999 #999 #555 #555;
 			}
 		
@@ -226,16 +221,131 @@ form.form fieldset{
 					form.form fieldset div > table tbody tr td input{
 						width: 100%;
 						}
+						
+	form.form div.botoes{
+		position:relative;
+		margin: 0;
+		top: -20px;		
+		}					
+						
 	
-	form.form .botao{
-		margin-top: -20px;
+	form.form div.botoes button.confirm{
+		background: #054e81;
+		border-color: #002f4f;
 		}
+		
+		form.form div.botoes button.confirm:hover{
+			background: #13679f;
+			}
 		
 	
 	.mceEditor{
 		display: block;
 		margin: 0 -30px 0 0 !important;
 		}	
+		
+		
+		
+/********************************************************************************		Area postar	*/
+.hb_areaPostar{
+	
+	}
+	
+	.hb_areaPostar form{
+		display: flex;
+		}
+		
+		.hb_areaPostar form fieldset{			
+			flex: 1 1 auto;
+			flex-direction: row;
+			justify-content: flex-start;
+			margin-right: 10px;
+			}
+							
+			.hb_areaPostar form fieldset div{
+				width: calc(100% - 63px);
+				float: left;				
+				clear: none;
+				margin: 0;
+				}
+			
+			.hb_areaPostar form fieldset div.img{
+				width: 58px;
+				margin-right: 5px;
+				}
+				
+				.hb_areaPostar form fieldset div.img img{
+					border-radius: 50%;
+					}
+					
+				.hb_areaPostar form fieldset div textarea{
+					height: 50px;
+					max-height: 600px;
+					min-height: auto;
+					}
+					
+				.hb_areaPostar form fieldset div .markdowninfo{
+					display: none;
+					}
+					
+		.hb_areaPostar form div.botoes{
+			flex: 0 0 auto;
+			width: 58px;
+			margin: 0;
+			}
+			
+			
+/********************************************************************************		MARKDOWN 	*/
+.hb_markdown{
+		
+	}
+	
+	.hb_markdown h1, .hb_markdown h2{
+		color: inherit !important;
+		margin-bottom: 10px;
+		}
+	
+	.hb_markdown p,
+	.hb_markdown li{
+		font-size: 1.3em;
+		margin-bottom: 10px;
+		line-height: 140%;
+		}
+		
+	.hb_markdown a{
+		text-decoration: underline;
+		}
+		
+	.hb_markdown ul{
+		margin-bottom: 10px;
+		list-style-type: circle;
+		list-style-position: inside;
+		padding-left: 10px;
+		}
+		
+		.hb_markdown li{
+			margin-bottom: 5px;
+			list-style-type: disc;
+			}
+	
+	.hb_markdown pre{
+		border: none;
+		padding: 0;
+		font-size: 1em;
+		}
+		
+		
+		.hb_markdown pre code{
+			padding: 5px;
+			display: block;
+			border: 1px solid #ccc;
+			border-width: 1px 1px 1px 2px;
+			margin-bottom: 10px;
+			font-size: 1.5em;
+			}
+		
+/****************************************************************************************************/	
+	
 
 /* Blocos */
 .blokos{

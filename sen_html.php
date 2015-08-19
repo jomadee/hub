@@ -1,2 +1,0 @@
-<?php
-$aplikajo->onclient();

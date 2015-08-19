@@ -1,3 +1,6 @@
+<?php 
+$texto = new Parsedown();
+?>
 <div id="cmd_home"  class="hb_internPage">
 	<div class="hb_menu cmd-cmd_menu">
 		<?php require_once $_ll['app']['pasta'].'comunidade/menu.php';?>
@@ -7,7 +10,7 @@
 		<div class="hb_box cmd-cmd_top">
 			<?php 
 			echo '<span class="titulo">'.$this->cmdd['nome'].'</span>'
-				.'<div class="descricao">'.$this->cmdd['descricao'].'</div>'; 
+				.'<div class="descricao">'.$texto->text($this->cmdd['descricao']).'</div>'; 
 			?>
 		</div>
 				
@@ -33,7 +36,7 @@
 				
 				while($dados = mysql_fetch_assoc($query)){
 					$url = $this->home.'&sapm=forum&cmd='.$this->cmdd['id'].'&topico=' . $dados['id'];
-					$mensagem = substr(strip_tags($dados['mensagem']), 0, 100);
+					$mensagem = substr(strip_tags($texto->text($dados['mensagem'])), 0, 100);
 					
 					echo '<div class="post">'
 							.'<span class="titulo ll_color">'.($this->cmdd['membro'] == true
@@ -58,7 +61,7 @@
 	
 	<div class="hb_lateral cmd-cmd_lateral">
 		<div class="hb_box">
-			<span class="titulo">Membros</span>
+			<span class="titulo">Membros <?php echo '<span class="num">('.$this->cmdd['membros'].')</span>';?></span>
 			<div class="fotos">
 				<?php 
 				$query = mysql_query('select uct.id, uct.img

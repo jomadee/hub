@@ -172,6 +172,10 @@
 		text-align: center;
 		}
 		
+		.cmd-cmd_menu h1 a{
+			color: inherit !important;
+			}
+		
 	.cmd-cmd_menu ul{
 		padding-bottom: 20px;
 		border-bottom: 1px solid #ddd;
@@ -274,17 +278,75 @@
 	
 	.cmd-cmd_lateral .titulo{
 		font-size: 1.3em;
-		 margin: -5px -10px 0;	
+		 margin: 0px -5px 0;
+		 top: -5px;	
+		 position: relative;
 		}
+		
+		.cmd-cmd_lateral .titulo .num{
+			font-size: 0.8em;
+			}
 		
 	.cmd-cmd_lateral .fotos{
 		display: flex;
 		 flex-wrap:  wrap;
 		  justify-content: space-between;
-		  margin: 10px -10px 0;
+		  margin: 10px -5px 0;
 		  align-content: space-between;
 		  height: 168px;
 		}
+		
+		
+		
+/*************		FORUM	*/
+
+#cmd_forum{
+		
+	}
+	
+	#cmd_forum .topico{
+		
+		}
+		
+		#cmd_forum .topico .post{
+			display: flex;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			border-bottom: 1px dotted #ddd;
+			}
+
+			
+			#cmd_forum .topico .post .img{
+				flex: 0 0 auto;
+				width: 58px;
+				margin-right: 4px;
+				}
+				
+				#cmd_forum .topico .post .img img{
+					border-radius: 50%;
+					}
+			
+			#cmd_forum .topico .post .texto{
+				flex: 1 1 auto;
+				}
+			
+				#cmd_forum .topico .post .texto .titulo{
+					margin-bottom: 10px;
+					display: block;
+					}
+			
+					#cmd_forum .topico .post .texto .titulo .posdadoPor{
+						font-size: 1.4em;
+						font-weight: 600;
+						}
+			
+				#cmd_forum .topico .post .blocoTexto{
+					
+					}
+			
+						
+						
+
 	
 /*************		HOME	
 #cmd_home{

@@ -23,8 +23,6 @@ class lliurehub extends aplimo{
 			die();
 		}
 		
-		$this->user = mysql_fetch_assoc(mysql_query('select * from '.PREFIXO.'usuario_conta where id = "'.$_ll['user']['id'].'" limit 1'));
-		
 		$total_reg = 30;
 		$tr = 10;
 		?>
@@ -124,6 +122,7 @@ class lliurehub extends aplimo{
 
 
 $aplikajo = new lliurehub();
+$aplikajo->user = mysql_fetch_assoc(mysql_query('select * from '.PREFIXO.'usuario_conta where id = "'.$_ll['user']['id'].'" limit 1'));
 $aplikajo->nome = 'lliure<strong>Hub</strong>';
 
 $aplikajo->prefixo = PREFIXO.'hub_';

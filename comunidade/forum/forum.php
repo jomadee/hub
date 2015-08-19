@@ -1,4 +1,4 @@
-<div id="cmd_home"  class="hb_internPage">
+<div id="cmd_forum"  class="hb_internPage">
 	<div class="hb_menu cmd-cmd_menu">
 		<?php require_once $_ll['app']['pasta'].'comunidade/menu.php';?>
 	</div>
@@ -24,31 +24,36 @@
 					WHERE
 						a.topico = "' . $_GET['topico'] . '"			
 					';
-		
-						
-			//$sql .= 'LIMIT' . (isset($_GET['pag']) && $_GET['pag'] != 'ultima'? $paginacao->limit(): ($total - $paginacao->visivel > 0? $total - $paginacao->visivel: 0) . ', ' . $paginacao->visivel);
 				
 			$mensagens = mysql_query($sql);
 			?>
-						
-							
-			<div class="cabecalho_m">
-				<h2><?php echo $topico['nome']?></h2>
-			</div>
+			<h2><?php echo $topico['nome']?></h2>		
 				
-			<div class="mensagens">
+			<div class="topico">
 				<?php
+				$texto = new Parsedown();
 				while($mensagem = mysql_fetch_assoc($mensagens)){?>
-					<div>
+					<div class="post">
 						<div class="img">
-							<a href="perfil/<?php echo $mensagem['usuario']?>"><img src="<?php echo img('uploads/contas/mini_' . $mensagem['img']); ?>" /></a>
+							<?php 
+							echo (!empty($mensagem['usuario'])
+								? '<a href="perfil/'.$mensagem['usuario'].'"><img src="'.img('uploads/contas/mini_' . $mensagem['img']).'" /></a>'
+								: '<img src="'.$_ll['app']['pasta'].'img/contas/mini_sem_imagem.jpg'.'" />'
+							);
+							?>
 						</div>
+						
 						<div class="texto">
 							<span class="titulo">
-								<a class="posdadoPor" href="perfil<?php echo ($this->user['id'] == $mensagem['usuario'])? '': '/' . $mensagem['usuario'];?>"><?php echo stripslashes($mensagem['nome']);?></a> - <?php echo rd_date($mensagem['data']);?>
+								<?php 
+								echo (!empty($mensagem['usuario'])
+									? '<a class="posdadoPor ll_color" href="'. $_ll['app']['home'].'&apm=perfil&perfil='.$mensagem['usuario'].'">'.stripslashes($mensagem['nome']).'</a> - '
+									: '' ).rd_date($mensagem['data']);
+								?>
+								
 							</span>
-							<div class="blocoTexto">
-								<?php echo url2link(stripslashes($mensagem['mensagem']));?>
+							<div class="blocoTexto hb_markdown">
+								<?php echo $texto->text($mensagem['mensagem']);?>
 							</div>
 						</div>
 					</div>
@@ -56,69 +61,53 @@
 				}?>
 			</div>
 			
-			<div class="areaPostar">
-				<form id="responder" class="form" action="<?php echo $this->onserver.'&cmd='.$this->cmdd['id'].'&topico=' . $topico['id'], '/ac=envi'?>" method="post">
+			<div class=hb_areaPostar>
+				<form id="responder" class="form" action="<?php echo $_ll['app']['onserver'].'&apm=comunidade&cmd='.$this->cmdd['id'].'&topico=' . $topico['id'], '&ac=post'?>" method="post">
 					<input type="hidden" name="conversa" value="<?php echo $topico['id']?>"/>
 					<fieldset>
-						<div>		
-							<label><?php _t('frm-resposta'); ?></label>				
-							<textarea  name="mensagem"></textarea>
-						</div>				
+						<div class="img">
+							<img src="<?php echo img('uploads/contas/mini_' . $this->user['img']); ?>" />	
+						</div>
+						
+						<div>
+							<textarea class="hb_textoarea"  name="mensagem" placeholder="<?php _t('frm-resposta'); ?>"></textarea>
+							<span class="ex markdowninfo">Quer fazer uma formatação mais agradável? <a href="http://rafaelbriet.com.br/o-que-e-e-como-usar-linguagem-markdown" target="blank">clique aqui</a></span>
+						</div>
 					</fieldset>	
 					<div class="botoes">
-						<button class="postar" type="submit"><?php _t('ac-postar');?></button>
+						<button class="postar confirm" type="submit"><?php _t('ac-postar');?></button>
 					</div>				
 				</form>				
 			</div>
-			
-			
-			<script type="text/javascript" src="<?php echo $_ll['app']['pasta'].'js/jquery.validate.min.js'?>"></script>
-			
+						
 			<script type="text/javascript">
 							
 				$(function(){	
-					var validator = $("#responder").submit(function() {
-						// update underlying textarea before submit validation
-						tinyMCE.triggerSave();
-						if ($(this).valid()){
-							$('.postar').attr('disabled', 'disabled').html('Postando!');
-						}else{
-							return false;
+					$('.hb_textoarea').focusin(function(){
+						$(this).animate({ height: "400px"}, 300);
+						$('.markdowninfo').css('display', 'block');
+						$('html, body').animate({scrollTop:  $(document).height()}, 'slow');
+					}).focusout(function(){
+						if($(this).val() == ''){
+							$(this).animate({ height: "58px"}, 300);
+							$('.markdowninfo').hide();
 						}
-					}).validate({
+					});
+
+					
+					$("#responder").validate({
 						ignore: "",
 						rules: {
 							mensagem: "required"
 						},
-						errorPlacement: function(label, element) {
-							// position error label after generated textarea
-							if (element.is("textarea")) {
-								label.insertAfter(element.next());
-							} else {
-								label.insertAfter(element)
-							}
+						messages:{
+							mensagem: ""
 						}
 					});
 					
-					validator.focusInvalid = function() {
-						// put focus on tinymce on submit validation
-						if( this.settings.focusInvalid ) {
-							try {
-								var toFocus = $(this.findLastActive() || this.errorList.length && this.errorList[0].element || []);
-								if (toFocus.is("textarea")) {
-									tinyMCE.get(toFocus.attr("id")).focus();
-								} else {
-									toFocus.filter(":visible").focus();
-								}
-							} catch(e) {
-								// ignore IE throwing errors when focusing hidden elements
-							}
-						}
-					}
 					
 				});	
 			</script>
-	
 			<?php
 		}
 		?>

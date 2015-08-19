@@ -101,7 +101,7 @@ switch(isset($_GET['p']) ? $_GET['p'] : 'home'){
 							<img src="<?php echo img('uploads/comunidades/g_'.$dados['img']); ?>" class="imagem"/>
 							
 							
-							<span class="membros shcolor"><?php echo _t('cmd-membros', false),': ', $dados['membros']; ?></span>
+							<span class="membros ll_color"><?php echo _t('cmd-membros', false),': ', $dados['membros']; ?></span>
 							
 						</div>
 						<?php

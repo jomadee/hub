@@ -1,0 +1,2 @@
+<?php
+lliure::inicia('parsedown');

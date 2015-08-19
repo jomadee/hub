@@ -13,7 +13,7 @@ $subPagina = 'comunidades/' . $modo;
 if(isset($_GET['cmd'])) {
 	$subPagina = 'home/' . $modo;
 	
-	$cmdd = mysql_fetch_assoc(mysql_query('select * from '.PREFIXO.'comunidade where id = "'.$_GET['cmd'].'" limit 1'));
+	$cmdd = mysql_fetch_assoc(mysql_query('select a.*, (select count(id) from '.PREFIXO.'usuario_comunidade where comunidade = a.id) as membros from '.PREFIXO.'comunidade a where a.id = "'.$_GET['cmd'].'" limit 1'));
 
 	$query = mysql_query('select * from '.PREFIXO.'usuario_comunidade where comunidade = "'.$cmdd['id'].'" and usuario = "'.$_ll['user']['id'].'" ');
 
