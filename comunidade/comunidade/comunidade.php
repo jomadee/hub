@@ -1,5 +1,6 @@
 <?php 
 $texto = new Parsedown();
+
 ?>
 <div id="cmd_home"  class="hb_internPage">
 	<div class="hb_menu cmd-cmd_menu">
@@ -19,7 +20,7 @@ $texto = new Parsedown();
 			
 			<div class="cmd-forum_table">
 				<?php		
-
+				
 				$query = 'select a.*, count(b.topico) - 1 as total,
 							b.mensagem, b.data
 							from '.PREFIXO.'comunidade_topicos a
@@ -33,11 +34,10 @@ $texto = new Parsedown();
 							';
 				
 				$query = mysql_query($query);
-				
+			
 				while($dados = mysql_fetch_assoc($query)){
 					$url = $this->home.'&sapm=forum&cmd='.$this->cmdd['id'].'&topico=' . $dados['id'];
 					$mensagem = substr(strip_tags($texto->text($dados['mensagem'])), 0, 100);
-					
 					echo '<div class="post">'
 							.'<span class="titulo ll_color">'.($this->cmdd['membro'] == true
 								 ? '<a href="'.$url.'" class="ll_color">'.$dados['nome'].'</a>'
@@ -52,6 +52,7 @@ $texto = new Parsedown();
 									
 						.'</div>';
 				}
+				
 				?>
 				<div class="both"></div>
 			</div>
@@ -75,9 +76,10 @@ $texto = new Parsedown();
 						limit 9');
 	
 				while($user = mysql_fetch_assoc($query))
-					echo '<img src="'. img('uploads/contas/mini_'.$user['img'], '50-50-o'). '" class="imagem"/>'
+					echo '<a href="'.$_ll['app']['home'].'&apm=perfil&user='.$user['id'].'"><img src="'. img('uploads/contas/mini_'.$user['img'], '50-50-o'). '" class="imagem"/></a>'
 				?>
 			</div>
 		</div>
 	</div>
 </div>
+

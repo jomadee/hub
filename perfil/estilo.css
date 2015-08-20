@@ -1,0 +1,71 @@
+.container.corpo .menu{
+	display: none;
+	}
+	
+	.hb_perfil{
+		height: 100%;
+		}
+	
+	.hb_pf_cabecalho{
+		height: 268px;
+		background-position: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 10px;
+		}
+				
+		.hb_pf_cabecalho .fotoP{	
+			margin-top: 90px;
+			
+			}
+			
+			
+			.hb_pf_cabecalho .fotoP img{	
+				-webkit-box-shadow: 0px 0px 0px 2px rgba(255,255,255,0.35);
+				-moz-box-shadow: 0px 0px 0px 2px rgba(255,255,255,0.35);
+				box-shadow: 0px 0px 0px 2px rgba(255,255,255,0.35);
+				border-radius: 50%;
+				}
+			
+		.hb_pf_cabecalho h1{
+			margin: 0;
+			font-size: 1.8em;
+			color: #fff !important;
+			text-shadow: 1px 1px 1px #222;
+			margin-top: 5px;
+
+			}
+		
+		.hb_pf_cabecalho .trabalho{
+			margin: 0;
+			color: #fff;
+			text-shadow: 1px 1px 1px #222;
+			font-size: 1.1em;
+			}
+			
+			
+	.hb_perfil .hb_internPage{
+		height: calc(100% - 278px);
+		}
+	
+	
+	.hb_box .titulo{
+		display: block;
+		font-size: 1.3em;
+		margin-bottom: 10px;
+		}	
+		
+	.hb_box .cont{
+		display: flex;
+		width: 100%; 
+		flex-wrap: wrap;
+		float: left;
+		justify-content: space-between;
+		}
+		
+		.hb_box .cont a{
+			margin: 2px;
+			}
+		
+	

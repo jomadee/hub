@@ -28,7 +28,7 @@ class lliurehub extends aplimo{
 		?>
 		<div class="container cabecalho ll_background">
 			<div class="menu">
-				<h1><a href="<?php echo $_ll['app']['home'];?>"><img src="<?php echo $_ll['app']['pasta'].'img/logo-top.png'?>" alt="lliureHub"></a></h1>
+				<h1><a href="<?php echo $_ll['url']['endereco'];?>"><img src="<?php echo $_ll['app']['pasta'].'img/logo-top.png'?>" alt="lliureHub"></a></h1>
 			</div>
 			
 			<div class="centro">
@@ -45,7 +45,7 @@ class lliurehub extends aplimo{
 				<div class="supre" style="background-image: url(<?php echo img('contas/bg_'.$this->user['capa']); ?>);">
 					<div class="fotoP">
 						<div class="afoto">
-							<a href="<?php echo 'perfil/'.$this->user['id'];?>"><img src="<?php echo img('contas/mini_'.$this->user['img']);?>" alt="" /></a>
+							<a href="<?php echo $_ll['app']['home'].'&apm=perfil&user='.$this->user['id'];?>"><img src="<?php echo img('contas/mini_'.$this->user['img']);?>" alt="" /></a>
 						</div>
 					</div>
 					

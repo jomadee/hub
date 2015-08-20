@@ -37,7 +37,7 @@
 						<div class="img">
 							<?php 
 							echo (!empty($mensagem['usuario'])
-								? '<a href="perfil/'.$mensagem['usuario'].'"><img src="'.img('uploads/contas/mini_' . $mensagem['img']).'" /></a>'
+								? '<a href="'.$_ll['app']['home'].'&apm=perfil&user='.$mensagem['usuario'].'"><img src="'.img('uploads/contas/mini_' . $mensagem['img']).'" /></a>'
 								: '<img src="'.$_ll['app']['pasta'].'img/contas/mini_sem_imagem.jpg'.'" />'
 							);
 							?>
@@ -47,7 +47,7 @@
 							<span class="titulo">
 								<?php 
 								echo (!empty($mensagem['usuario'])
-									? '<a class="posdadoPor ll_color" href="'. $_ll['app']['home'].'&apm=perfil&perfil='.$mensagem['usuario'].'">'.stripslashes($mensagem['nome']).'</a> - '
+									? '<a class="posdadoPor ll_color" href="'.$_ll['app']['home'].'&apm=perfil&user='.$mensagem['usuario'].'">'.stripslashes($mensagem['nome']).'</a> - '
 									: '' ).rd_date($mensagem['data']);
 								?>
 								

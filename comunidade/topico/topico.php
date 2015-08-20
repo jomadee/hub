@@ -5,7 +5,7 @@
 	
 	<div class="hb_centro parcial">
 		<h2><?php _t('frm-criar-topc')?></h2>
-		<form class="form">
+		<form class="form" action="<?php echo $_ll['app']['onserver'].'&apm=comunidade&cmd='.$this->cmdd['id'].'&ac=topico_novo' ?>" method="post">
 			<fieldset>
 				<div>
 					<label><?php _t('frm-titulo')?></label>
